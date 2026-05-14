@@ -1,5 +1,9 @@
 # Pomodoro Changelog
 
+## [Improvement] - {PR_MERGE_DATE}
+
+- Added preference to hide the entire menu bar item when the timer is stopped
+
 ## [Improvement] - 2026-03-08
 
 - Add session label to end of interval notification

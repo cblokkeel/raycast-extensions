@@ -25,7 +25,7 @@ const slackClient = OAuthService.slack({
 
 export default function TogglePomodoroTimer() {
   const [currentInterval, setCurrentInterval] = useState<Interval | undefined>(getCurrentInterval());
-  const { isLoading, data: tokenSet } = usePromise(async () => slackClient.client.getTokens(), []);
+  const { isLoading, data: tokenSet, revalidate } = usePromise(async () => slackClient.client.getTokens(), []);
 
   const token = tokenSet && !tokenSet.isExpired() ? tokenSet.accessToken : undefined;
 
@@ -84,6 +84,7 @@ export default function TogglePomodoroTimer() {
   async function onSignIn() {
     try {
       await slackClient.authorize();
+      revalidate();
     } catch (error) {
       console.error("Failed to authorize Slack:", error);
     }

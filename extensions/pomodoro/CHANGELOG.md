@@ -1,6 +1,6 @@
 # Pomodoro Changelog
 
-## [Improvement] - {PR_MERGE_DATE}
+## [Improvement] - 2026-05-15
 
 - Added preference to hide the entire menu bar item when the timer is stopped
 

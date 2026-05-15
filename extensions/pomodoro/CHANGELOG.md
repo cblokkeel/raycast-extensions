@@ -1,5 +1,9 @@
 # Pomodoro Changelog
 
+## [Fixes] - {PR_MERGE_DATE}
+
+- Fix Slack menu-bar command erroring when user is logged out, and show a clean "Sign in to Slack" option instead
+
 ## [Improvement] - 2026-05-15
 
 - Added preference to hide the entire menu bar item when the timer is stopped
